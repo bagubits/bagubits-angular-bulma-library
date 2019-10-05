@@ -1,0 +1,14 @@
+<div class="field">
+  <p class="control"
+    [ngClass]="{'has-icons-left':iconleft,'has-icons-right':iconright,'is-loading':(loading && loading=='true')}">
+    <input class="input" [ngClass]="size ? 'is-'+size : ''" type="{{type}}" placeholder="{{placeholder}}"
+      [attr.disabled]="(disabled && disabled=='true') ? '' : null"
+      [readonly]="(loading && loading=='true') ? true : false" [(ngModel)]="value">
+    <span class="icon is-small is-left" *ngIf="iconleft">
+      <i class="fas fa-{{iconleft}}"></i>
+    </span>
+    <span class="icon is-small is-right" *ngIf="iconright">
+      <i class="fas fa-{{iconright}}"></i>
+    </span>
+  </p>
+</div>
