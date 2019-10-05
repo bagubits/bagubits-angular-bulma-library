@@ -1,0 +1,6 @@
+<div class="field">
+  <p class="control" [ngClass]="{'is-loading':loading}">
+    <textarea class="textarea" placeholder="{{placeholder}}" [(ngModel)]="value" [attr.disabled]="disabled ? '' : null"
+      [readonly]="loading ? true : false"></textarea>
+  </p>
+</div>
