@@ -1,0 +1,11 @@
+<div class="field" *ngIf="options && optionkey">
+  <div class="control" [ngClass]="{'has-icons-left':icon,'is-loading':loading}">
+    <div class="select">
+      <select [attr.disabled]="(disabled||loading) ? '' : null" [(ngModel)]="value">
+        <option *ngFor="let option of options">{{option[optionkey]}}</option>
+      </select>
+    </div>
+    <div class="icon is-small is-left" *ngIf="icon">
+      <i class="fas fa-{{icon}}"></i>
+    </div>
+  </div>
