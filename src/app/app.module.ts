@@ -8,6 +8,7 @@ import { RadioModule } from './modules/radio/radio.module';
 import { TextareaModule } from './modules/textarea/textarea.module';
 import { SelectModule } from './modules/select/select.module';
 import { CheckboxModule } from './modules/checkbox/checkbox.module';
+import { ButtonModule } from './modules/button/button.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CheckboxModule } from './modules/checkbox/checkbox.module';
     TextareaModule,
     SelectModule,
     CheckboxModule,
-    RadioModule
+    RadioModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

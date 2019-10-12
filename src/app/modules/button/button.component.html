@@ -1,0 +1,22 @@
+<ng-container [ngSwitch]="type">
+  <a *ngSwitchCase="'a'" [ngClass]="getCSSClasses()">
+    <span class="icon" [ngClass]="size ? 'is-'+size : ''" *ngIf="iconleft">
+      <i class="fas fa-{{iconleft}}"></i>
+    </span>
+    <span *ngIf="label">{{label}}</span>
+    <span class="icon" [ngClass]="size ? 'is-'+size : ''" *ngIf="iconright">
+      <i class="fas fa-{{iconright}}"></i>
+    </span>
+  </a>
+  <button *ngSwitchCase="'button'" [ngClass]="getCSSClasses()">
+    <span class="icon" [ngClass]="size ? 'is-'+size : ''" *ngIf="iconleft">
+      <i class="fas fa-{{iconleft}}"></i>
+    </span>
+    <span *ngIf="label">{{label}}</span>
+    <span class="icon" [ngClass]="size ? 'is-'+size : ''" *ngIf="iconright">
+      <i class="fas fa-{{iconright}}"></i>
+    </span>
+  </button>
+  <input type="submit" *ngSwitchCase="'submit'" [ngClass]="getCSSClasses()" value="{{label}}" />
+  <input type="reset" *ngSwitchCase="'reset'" [ngClass]="getCSSClasses()" value="{{label}}" />
+</ng-container>

@@ -15,4 +15,8 @@ export class AppComponent {
   public test4: boolean = true;
   public test5ds: any[] = [{ name: "test1", id: "1" }, { name: "test2", id: "2" }, { name: "test3", id: "3" }];
   public test5: string = "test1";
+
+  handle() {
+    console.log("quiiii");
+  }
 }
