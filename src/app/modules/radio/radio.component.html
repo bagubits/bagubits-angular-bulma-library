@@ -1,0 +1,7 @@
+<div class="control" *ngIf="options && optionkey && optionvalue">
+  <label class="radio" *ngFor="let option of options">
+    <input type="radio" name="radio-{{name}}" id="radio-{{option[optionkey]}}" [value]="option[optionvalue]"
+      [attr.disabled]="(disabled||loading) ? '' : null" />
+    {{option[optionkey]}}
+  </label>
+</div>
